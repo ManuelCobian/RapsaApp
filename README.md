@@ -29,6 +29,7 @@ cd tu-repositorio
 2️⃣ Instalar dependencias
 composer install
 npm install
+npm run build
 
 3️⃣ Archivo .env
 
@@ -53,3 +54,4 @@ DB_PASSWORD=
 Ejecuta las migraciones junto con los seeders:
 
 php artisan migrate --seed
+
