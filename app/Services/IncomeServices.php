@@ -32,10 +32,13 @@ class IncomeServices
         });
     }
 
-
-    public function getTotalIncome(Provider $provider): Float
+    
+    public function getTotalIncome($date = ""): Float
     {
-        return (float) Income::where('provider_id', $provider->id)
-            ->sum('amount');
+        $query = Income::sum('amount');
+        if ($date) {
+            $query = Income::whereDate('date', $date)->sum('amount');
+        }
+        return (float) $query;
     }
 }

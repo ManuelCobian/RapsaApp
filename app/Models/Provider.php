@@ -25,11 +25,11 @@ class Provider extends Model
 
     public function income()
     {
-        return $this->hasMany(Income::class, 'user_id');
+        return $this->hasMany(Income::class, 'provider_id');
     }
 
     public function expenses()
     {
-        return $this->hasMany(Expense::class, 'user_id');
+        return $this->hasMany(Expense::class, 'provider_id');
     }
 }

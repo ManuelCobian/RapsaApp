@@ -32,9 +32,12 @@ class ExpenseServices
         });
     }
 
-    public function getTotalExpense(Provider $provider): Float
+    public function getTotalExpense($date = ""): Float
     {
-        return (float) Expense::where('provider_id', $provider->id)
-            ->sum('amount');
+        $query = Expense::sum('amount');
+        if ($date) {
+            $query = Expense::whereDate('date', $date)->sum('amount');
+        }
+        return (float) $query;
     }
 }

@@ -11,7 +11,6 @@ use App\Models\TypeClinic;
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-
 Route::resource('roles', RoleController::class);
 
 Route::resource('users', UserController::class);
