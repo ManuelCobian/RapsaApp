@@ -49,46 +49,6 @@
 
       
 
-    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
-        <a href="{{ route('admin.incomes.index') }}" class="group">
-            <div
-                class="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition
-               hover:-translate-y-0.5 hover:shadow-md">
-                <div
-                    class="h-11 w-11 rounded-xl border border-blue-600/20 bg-blue-600/10 text-blue-900 flex items-center justify-center">
-                    <i class="fa-solid fa-money-bill"></i>
-                </div>
-                <div>
-                    <div class="font-extrabold text-slate-900">Ingresos </div>
-                    <div class="text-sm text-slate-500">Crea, edita y asigna de ingresos.</div>
-                </div>
-                <div class="ml-auto text-slate-400 group-hover:text-slate-600">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-        </a>
-
-        <a href="{{ route('admin.expenses.index') }}" class="group">
-            <div
-                class="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition
-               hover:-translate-y-0.5 hover:shadow-md">
-                <div
-                    class="h-11 w-11 rounded-xl border border-emerald-600/20 bg-emerald-600/10 text-emerald-700 flex items-center justify-center">
-                    <i class="fa-solid fa-money-bill"></i>
-                </div>
-                <div>
-                    <div class="font-extrabold text-slate-900">Gastos</div>
-                    <div class="text-sm text-slate-500">Altas, bajas y control de gastos.</div>
-                </div>
-                <div class="ml-auto text-slate-400 group-hover:text-slate-600">
-                    <i class="fas fa-chevron-right"></i>
-                </div>
-            </div>
-        </a>
-    </div>
-    <br>
-    <br>
-
-    @livewire('admin.datatables.provider-full-table')
+    @livewire('admin.dashboard')
 
 </div>
